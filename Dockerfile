@@ -16,7 +16,8 @@ RUN apt update && \
 	  git \
 	  wget \
 	  vim \
-	  python \
+	  python3 \
+	  python3-dev \
 	  python3-pip
 
 
