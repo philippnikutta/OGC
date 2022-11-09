@@ -1,19 +1,16 @@
-FROM nvidia/cuda:11.1.1-cudnn8-runtime-ubuntu20.04
+FROM nvidia/cuda:11.1.1-cudnn8-devel-ubuntu20.04
 
 ENV DEBIAN_FRONTEND=noninteractive \
-  CUDA_HOME=/usr/local/cuda-11.1 \
-  CUDA_ARCH=sm_111 \
-  LD_LIBRARY_PATH=/usr/local/cuda-11.1/lib64:$LD_LIBRARY_PATH \
-  PATH=/usr/local/cuda-11.1/bin:$PATH
+  CUDA_HOME=/usr/local/cuda \
+  CUDA_ARCH=sm_75 \
+  LD_LIBRARY_PATH=/usr/local/cuda/lib64:$LD_LIBRARY_PATH \
+  PATH=/usr/local/cuda/bin:$PATH
 
 
-# Set default shell to /bin/bash
-SHELL ["/bin/bash", "-cu"]
 
 RUN apt update && \
 	  apt install -y  \
 	  build-essential \
-	  g++-4.8 \
 	  git \
 	  wget \
 	  vim \
