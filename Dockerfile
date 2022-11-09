@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive \
   PATH=/usr/local/cuda/bin:$PATH
 
 RUN apt update && \
-  apt install -y git software-properties-common zlib1g-dev
+  apt install -y git software-properties-common zlib1g-dev python python3-pip
 
 
 COPY . ogc
