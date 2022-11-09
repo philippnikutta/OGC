@@ -12,6 +12,7 @@ SHELL ["/bin/bash", "-cu"]
 
 RUN apt update && \
 	  apt install -y  \
+	  build-essential \
 	  g++-4.8 \
 	  git \
 	  wget \
